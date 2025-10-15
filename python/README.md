@@ -57,6 +57,27 @@ AZURE_AI_PROJECT_ENDPOINT=...
 AZURE_AI_MODEL_DEPLOYMENT_NAME=...
 ```
 
+### Azure Service Principal Authentication
+
+For production environments and CI/CD pipelines, you can use Azure service principal authentication:
+
+```bash
+# Set service principal credentials
+AZURE_CLIENT_ID=your-service-principal-client-id
+AZURE_CLIENT_SECRET=your-service-principal-client-secret
+AZURE_TENANT_ID=your-azure-tenant-id
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=your-deployment-name
+```
+
+Or use Azure CLI login with service principal:
+
+```bash
+az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+```
+
+See the [Azure Service Principal Demo Guide](./samples/getting_started/AZURE_SERVICE_PRINCIPAL_DEMO.md) for detailed instructions.
+
 You can also override environment variables by explicitly passing configuration parameters to the chat client constructor:
 
 ```python
