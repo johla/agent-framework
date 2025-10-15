@@ -193,6 +193,7 @@ steps:
 
 ## Notes
 
-- The weather output will vary as it uses random conditions and temperatures
+- The weather output will vary as it uses **simulated/mock weather data** with random conditions and temperatures (not real weather data)
+- This is a demonstration of tool calling capabilities, not an actual weather service
 - Authentication method used is automatically selected based on available credentials
 - All methods produce the same functional result with the agent

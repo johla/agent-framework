@@ -89,7 +89,7 @@ The `minimal_sample_azure.py` script supports multiple authentication methods in
 
 ## Sample Code
 
-The demo creates a simple weather agent using Azure OpenAI:
+The demo creates a simple weather agent using Azure OpenAI to demonstrate tool calling capabilities:
 
 ```python
 from agent_framework.azure import AzureOpenAIChatClient
@@ -109,11 +109,14 @@ client = AzureOpenAIChatClient(credential=credential)
 agent = client.create_agent(
     name="WeatherAgent",
     instructions="You are a helpful weather agent.",
-    tools=get_weather
+    tools=get_weather  # Mock weather function for demonstration
 )
 
 # Run agent
 result = await agent.run("What's the weather like in Seattle?")
+```
+
+**Note**: The `get_weather` function returns simulated/mock weather data to demonstrate tool calling. It is not a real weather service.
 ```
 
 ## Troubleshooting
