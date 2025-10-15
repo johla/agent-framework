@@ -2,6 +2,25 @@
 
 This directory contains samples demonstrating the capabilities of Microsoft Agent Framework for Python.
 
+## Quick Start
+
+### Minimal Samples
+
+| File | Description |
+|------|-------------|
+| [`getting_started/minimal_sample.py`](./getting_started/minimal_sample.py) | Minimal OpenAI Chat Client Example |
+| [`getting_started/minimal_sample_azure.py`](./getting_started/minimal_sample_azure.py) | Minimal Azure OpenAI Example with Service Principal Authentication |
+
+### Azure Service Principal Authentication
+
+For running Azure samples with service principal authentication, see [AZURE_SERVICE_PRINCIPAL_DEMO.md](./getting_started/AZURE_SERVICE_PRINCIPAL_DEMO.md).
+
+You can also use the provided script:
+```bash
+cd python
+./run_minimal_sample_azure.sh
+```
+
 ## Agents
 
 ### A2A (Agent-to-Agent)
